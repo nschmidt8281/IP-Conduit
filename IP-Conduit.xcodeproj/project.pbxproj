@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E9FB951C6FFC887B4562B0F /* Pods_IP_Conduit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD57AB48AA0136AE5FBDEA4D /* Pods_IP_Conduit.framework */; };
 		CA1BD7B71F814AF400F4BBEB /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */; };
 		CAA0AB761F8135BC001C0E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */; };
 		CAA0AB781F8135BC001C0E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0AB771F8135BC001C0E54 /* ViewController.swift */; };
@@ -17,7 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234CC5903359E19C652C5132 /* Pods-IP-Conduit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP-Conduit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit.debug.xcconfig"; sourceTree = "<group>"; };
+		3A61046C6A5486924800F8F3 /* Pods-IP-Conduit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP-Conduit.release.xcconfig"; path = "Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit.release.xcconfig"; sourceTree = "<group>"; };
+		AD57AB48AA0136AE5FBDEA4D /* Pods_IP_Conduit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IP_Conduit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		CA81EBC51F817AE7005E2EF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAA0AB721F8135BC001C0E54 /* IP-Conduit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IP-Conduit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA0AB771F8135BC001C0E54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9FB951C6FFC887B4562B0F /* Pods_IP_Conduit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310B76DC5200332319F4A402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD57AB48AA0136AE5FBDEA4D /* Pods_IP_Conduit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58A0EC1425373729769FE587 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				234CC5903359E19C652C5132 /* Pods-IP-Conduit.debug.xcconfig */,
+				3A61046C6A5486924800F8F3 /* Pods-IP-Conduit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CAA0AB691F8135BB001C0E54 = {
 			isa = PBXGroup;
 			children = (
 				CAA0AB741F8135BC001C0E54 /* IP-Conduit */,
 				CAA0AB731F8135BC001C0E54 /* Products */,
+				58A0EC1425373729769FE587 /* Pods */,
+				310B76DC5200332319F4A402 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +83,7 @@
 		CAA0AB741F8135BC001C0E54 /* IP-Conduit */ = {
 			isa = PBXGroup;
 			children = (
+				CA81EBC51F817AE7005E2EF7 /* GoogleService-Info.plist */,
 				CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */,
 				CAA0AB771F8135BC001C0E54 /* ViewController.swift */,
 				CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */,
@@ -77,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAA0AB871F8135BC001C0E54 /* Build configuration list for PBXNativeTarget "IP-Conduit" */;
 			buildPhases = (
+				F72E801C34AC6BFB83139386 /* [CP] Check Pods Manifest.lock */,
 				CAA0AB6E1F8135BC001C0E54 /* Sources */,
 				CAA0AB6F1F8135BC001C0E54 /* Frameworks */,
 				CAA0AB701F8135BC001C0E54 /* Resources */,
+				3791E393CAF3946D48218D4A /* [CP] Embed Pods Frameworks */,
+				DE8899A4B9646566B10CC53E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -102,7 +131,7 @@
 				TargetAttributes = {
 					CAA0AB711F8135BC001C0E54 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -136,6 +165,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3791E393CAF3946D48218D4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8899A4B9646566B10CC53E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F72E801C34AC6BFB83139386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IP-Conduit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAA0AB6E1F8135BC001C0E54 /* Sources */ = {
@@ -280,13 +365,16 @@
 		};
 		CAA0AB881F8135BC001C0E54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 234CC5903359E19C652C5132 /* Pods-IP-Conduit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "IP-Conduit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.408industries.IP-Conduit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,13 +382,16 @@
 		};
 		CAA0AB891F8135BC001C0E54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A61046C6A5486924800F8F3 /* Pods-IP-Conduit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "IP-Conduit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.408industries.IP-Conduit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
