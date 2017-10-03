@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8E9FB951C6FFC887B4562B0F /* Pods_IP_Conduit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD57AB48AA0136AE5FBDEA4D /* Pods_IP_Conduit.framework */; };
 		CA1BD7B71F814AF400F4BBEB /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */; };
+		CA436CE61F8313AA006F5A09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA81EBC51F817AE7005E2EF7 /* GoogleService-Info.plist */; };
+		CA436CE81F831AF6006F5A09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA436CE71F831AF6006F5A09 /* LoginViewController.swift */; };
+		CA436CEA1F831B09006F5A09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA436CE91F831B09006F5A09 /* RegisterViewController.swift */; };
+		CA436CEE1F831B67006F5A09 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA436CED1F831B67006F5A09 /* HomePageViewController.swift */; };
 		CAA0AB761F8135BC001C0E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */; };
 		CAA0AB781F8135BC001C0E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0AB771F8135BC001C0E54 /* ViewController.swift */; };
 		CAA0AB7B1F8135BC001C0E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA0AB791F8135BC001C0E54 /* Main.storyboard */; };
@@ -22,6 +26,9 @@
 		3A61046C6A5486924800F8F3 /* Pods-IP-Conduit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IP-Conduit.release.xcconfig"; path = "Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit.release.xcconfig"; sourceTree = "<group>"; };
 		AD57AB48AA0136AE5FBDEA4D /* Pods_IP_Conduit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IP_Conduit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		CA436CE71F831AF6006F5A09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA436CE91F831B09006F5A09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CA436CED1F831B67006F5A09 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		CA81EBC51F817AE7005E2EF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAA0AB721F8135BC001C0E54 /* IP-Conduit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IP-Conduit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +93,9 @@
 				CA81EBC51F817AE7005E2EF7 /* GoogleService-Info.plist */,
 				CAA0AB751F8135BC001C0E54 /* AppDelegate.swift */,
 				CAA0AB771F8135BC001C0E54 /* ViewController.swift */,
+				CA436CE71F831AF6006F5A09 /* LoginViewController.swift */,
+				CA436CE91F831B09006F5A09 /* RegisterViewController.swift */,
+				CA436CED1F831B67006F5A09 /* HomePageViewController.swift */,
 				CA1BD7B61F814AF400F4BBEB /* LoginTextField.swift */,
 				CAA0AB791F8135BC001C0E54 /* Main.storyboard */,
 				CAA0AB7F1F8135BC001C0E54 /* Assets.xcassets */,
@@ -159,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA0AB831F8135BC001C0E54 /* LaunchScreen.storyboard in Resources */,
+				CA436CE61F8313AA006F5A09 /* GoogleService-Info.plist in Resources */,
 				CAA0AB801F8135BC001C0E54 /* Assets.xcassets in Resources */,
 				CAA0AB7B1F8135BC001C0E54 /* Main.storyboard in Resources */,
 			);
@@ -174,11 +185,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IP-Conduit/Pods-IP-Conduit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -228,8 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA0AB781F8135BC001C0E54 /* ViewController.swift in Sources */,
+				CA436CEE1F831B67006F5A09 /* HomePageViewController.swift in Sources */,
 				CA1BD7B71F814AF400F4BBEB /* LoginTextField.swift in Sources */,
 				CAA0AB761F8135BC001C0E54 /* AppDelegate.swift in Sources */,
+				CA436CEA1F831B09006F5A09 /* RegisterViewController.swift in Sources */,
+				CA436CE81F831AF6006F5A09 /* LoginViewController.swift in Sources */,
 				CAA0AB7E1F8135BC001C0E54 /* IP_Conduit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

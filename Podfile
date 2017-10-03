@@ -8,5 +8,6 @@ target 'IP-Conduit' do
   # Pods for IP-Conduit
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
 
 end
